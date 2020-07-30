@@ -1,1 +1,6 @@
-<p>products works!</p>
+<ul>
+  <li *ngFor="let product of products">
+    <img width="400" height="400" alt="{{product.name}}" src="https://{{product.image}}">
+    <p>Brand :{{product.brand}} Description: {{product.description}} {{product.price | currency:'CLP':'symbol-narrow'}}</p>
+  </li><br>
+</ul>

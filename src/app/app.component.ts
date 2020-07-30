@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder , FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ export class AppComponent {
   formQuery;
 
   constructor(private formBuilder: FormBuilder) {
-      this.formQuery = this.formBuilder.group({query: "",});
+    this.formQuery = this.formBuilder.group({ query: "", });
   }
 
   onSubmit(object) {

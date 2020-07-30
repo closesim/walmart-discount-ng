@@ -5,20 +5,20 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<unknown>;
   }
 
-  checkForSearchInput() {
-    return element(by.id('query')).isDisplayed();
+  checkForSearchInput(): Promise<boolean> {
+    return element(by.id('query')).isDisplayed() as Promise<boolean>;
   }
 
-  checkForSearchButton() {
-    return element(by.id('searchButton')).isDisplayed();
+  checkForSearchButton(): Promise<boolean> {
+    return element(by.id('searchButton')).isDisplayed() as Promise<boolean>;
   }
 
-  getSearchInput() {
-    return element(by.id('query'))
+  getSearchInput(){
+    return element(by.id('query'));
   }
 
   getSearchButton() {
-    return element(by.id('searchButton'))
+    return element(by.id('searchButton'));
   }
 
   getProductsElements() {

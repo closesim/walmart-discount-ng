@@ -16,7 +16,7 @@ describe('workspace-project App', () => {
 
   it('Should do a simple by text', async () => {
     await page.navigateTo();
-    await page.getSearchInput().clear()
+    await page.getSearchInput().clear();
     await page.getSearchInput().sendKeys('trcwl');
     await page.getSearchButton().click();
     expect(page.getProductsElements().count()).toBe(9);
@@ -24,13 +24,13 @@ describe('workspace-project App', () => {
 
   it('Should do a simple search by id', async () => {
     await page.navigateTo();
-    await page.getSearchInput().clear()
+    await page.getSearchInput().clear();
     await page.getSearchInput().sendKeys('618');
     await page.getSearchButton().click();
     expect(page.getProductsElements().count()).toBe(1);
     expect(page.getFirstProductDiscountElement()).toBeTruthy();
   });
-  
+
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser

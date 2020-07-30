@@ -1,7 +1,214 @@
 <div>
-  <form [formGroup]="formQuery" (ngSubmit)="onSubmit(formQuery.value)">
-    <input type="search" id="query" formControlName="query" placeholder="¿Qué estás buscando?" maxlength="512">
-    <button type="submit" id="searchButton">Buscar</button>
-  </form>
-  <app-products [query]="speech"></app-products>
+  <div class="wrapper">
+    <div>
+      <section>
+        <div class="d-flex">
+          <div class="header-info">
+            <span>Servicio al cliente de Lider.cl: WhatsApp <a href="#">+56957211492</a> | Horario: de lunes a viernes de 8:00 a 22:00 y sábado, domingo y festivos de 9:00 a 22:00</span>
+          </div>
+          <div class="site-header compact" style="background-color: rgb(0, 113, 206);">
+            <div class="logo">
+              <a href="#"><img alt="Lider Logo" src="https://www.lider.cl/catalogo/images/lider-logo.svg"></a>
+            </div>
+            <div class="menu-icon-container">
+                <div style="cursor: pointer;">
+                  <i class="zmdi zmdi-menu menu-icon"></i>
+                  <div class="show-category">Categorías</div>
+                </div>
+            </div>
+            <div style="width: 100%; margin: 0px 4%;">
+                <div class="search-width">
+                  <div class="search-box-container-header" style="padding-top: 10px;">
+                      <section>
+                        <div class="ais-InstantSearch__root">
+                            <div class="ais-InstantSearch__root">
+                              <div class="ais-SearchBox">
+                                  <form class="ais-SearchBox-form" [formGroup]="formQuery" (ngSubmit)="onSubmit(formQuery.value)">
+                                    <input type="search" id="query" formControlName="query" placeholder="¿Qué estás buscando?" maxlength="512" class="ais-SearchBox-input">
+                                    <button type="submit" title="Submit your search query." id="searchButton" class="ais-SearchBox-submit search-input-icons">
+                                        <svg class="ais-SearchBox-submitIcon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+                                          <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path>
+                                        </svg>
+                                    </button>
+                                  </form>
+                              </div>
+                            </div>
+                        </div>
+                      </section>
+                  </div>
+                </div>
+            </div>
+            <div class="cart-supermarket-width">
+              <div class="cart-container" style="background-color: rgb(6, 86, 143);">
+                <li class="list-inline-item cart-dropdown dropdown nav-item">
+                    <a aria-haspopup="true" href="#" class="p-0 nav-link" aria-expanded="false">
+                      <div class="d-flex justify-content-between shopping-cart-images">
+                          <img alt="cart" src="https://www.lider.cl/catalogo/images/lider-cart.svg" width="29" height="25">
+                          <div class="cart-quantity">
+                            <div class="quantity-number">0</div>
+                          </div>
+                      </div>
+                    </a>
+                </li>
+              </div>
+              <div class="go-to-supermarket-link">
+                <a href="#" rel="noopener noreferrer">
+                  <img alt="market-icon" width="20" src="https://www.lider.cl/catalogo/images/marketIcon.svg" style="margin-right: 5px;">Supermercado
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="app-container">
+        <div class="rct-app-content">
+          <div class="rct-page">
+            <div class="content-wrapper">
+              <div class="rct-page-content">  
+                <app-products class="shop-wrapper" style="margin-right: 5px;" [query]="speech"></app-products>              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background-color: rgb(0, 113, 206); background-position: initial initial; background-repeat: initial initial;">
+        <div class="rct-app-content">
+          <div style="background-color: rgb(245, 245, 245); max-width: inherit; background-position: initial initial; background-repeat: initial initial;">
+            <div class="content-wrapper">
+              <div class="shop-wrapper">
+                <div class="rct-page_d">
+                  <div class="pb-30">
+                    <div class="row">
+                      <div class="col-1"></div>
+                      <div class="col-12 bg-white cp-no-select" style="padding: 10px; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;">
+                        <span class="span-legal">Ver Información Legal </span><span class="pull-right">
+                          <img alt="white-arrow" height="18" src="https://www.lider.cl/catalogo/images/arrow_blue.svg" style="transform: none;">
+                        </span>
+                      </div>
+                      <div class="col-1"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="container-footer">
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col-2">
+                <div class="d-flex pt-10 pb-10 font-16">¿Necesitas Ayuda?</div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Preguntas frecuentes</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Servicio técnico</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Consulta tu boleta</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Devoluciones y cambios</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Consultas y reclamos</a>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="d-flex pt-10 pb-10 font-16">Infórmate</div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Medios de pago</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Pago 100% seguro</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Beneficios Lider.cl</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Tarjeta de regalo</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Recetas Lider</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Servifácil</a>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="d-flex pt-10 pb-10 font-16">Encuéntranos</div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Nuestros locales</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Tiendas con Pickup</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Cobertura supermercado</a>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="d-flex pt-10 pb-10 font-16">Acerca de Lider</div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Acerca de nosotros</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Términos y condiciones</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Información legal</a>
+                </div>
+                <div class="d-flex pt-2 pb-2 text-left">
+                  <a class="font-weight-normal text-white" href="#">Trabaja en Lider</a>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="d-flex pt-10 pb-10 font-16">Síguenos</div>
+                <div class="d-flex">
+                  <a href="#" class="mr-20" rel="noopener noreferrer">
+                    <img alt="twitter-logo" src="https://www.lider.cl/catalogo/images/Twitter.svg" width="18">
+                  </a>
+                  <a href="#" class="mr-20" rel="noopener noreferrer">
+                    <img alt="facebook-logo" src="https://www.lider.cl/catalogo/images/Facebook.svg" width="18">
+                  </a>
+                  <a href="#" class="mr-20" rel="noopener noreferrer">
+                    <img alt="youtube-logo" src="https://www.lider.cl/catalogo/images/Youtube.svg" width="18">
+                  </a>
+                  <a href="#" rel="noopener noreferrer">
+                    <img alt="instagram-logo" src="https://www.lider.cl/catalogo/images/Instagram.svg" width="18">
+                  </a>
+                </div>
+              </div>
+              <div class="col-1"></div>
+            </div>
+          </div>
+        </footer>
+        <div class="bg-white pt-10">
+          <div class="d-flex justify-content-center pt-10">
+            <p class="pt-10 font-12">Nuestras empresas</p>
+            <a href="#" class="pl-10 pr-10" rel="noopener noreferrer">
+              <img alt="walmart-chile" height="34" src="https://www.lider.cl/catalogo/images/wmt_chile.png">
+            </a>
+            <a href="#" class="pl-10 pr-10" rel="noopener noreferrer">
+              <img alt="lider" height="34" src="https://www.lider.cl/catalogo/images/lider.png">
+            </a>
+            <a href="#" class="pl-10 pr-10" rel="noopener noreferrer">
+              <img alt="lider-express" height="34" src="https://www.lider.cl/catalogo/images/express.png">
+            </a>
+            <a href="#" class="pl-10 pr-10" rel="noopener noreferrer">
+              <img alt="acuenta" height="34" src="https://www.lider.cl/catalogo/images/acuenta.png">
+            </a>
+            <a href="#" class="pl-10 pr-10" rel="noopener noreferrer">
+              <img alt="central-mayorista" height="34" src="https://www.lider.cl/catalogo/images/central_mayorista.png">
+            </a>
+            <a href="#" class="pl-10 pr-10" rel="noopener noreferrer">
+              <img alt="mi-club-lider" height="34" src="https://www.lider.cl/catalogo/images/mi_club_lider.png">
+            </a>
+          </div>
+          <div class="d-flex justify-content-center pt-5 pb-5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

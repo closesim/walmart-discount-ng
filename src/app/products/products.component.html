@@ -1,6 +1,7 @@
-<ul>
-  <li *ngFor="let product of products">
+<ul id="productList">
+  <li *ngFor="let product of products" class="productItem">
     <img width="400" height="400" alt="{{product.name}}" src="https://{{product.image}}">
-    <p>Brand :{{product.brand}} Description: {{product.description}} {{product.price | currency:'CLP':'symbol-narrow'}}</p>
+    <p>Brand :{{product.brand}} Description: {{product.description}}</p>
+    <div class="productDiscount">{{product.price | currency:'CLP':'symbol-narrow'}}</div>
   </li><br>
 </ul>

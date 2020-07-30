@@ -8,10 +8,29 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('Should display search form', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('walmart-discount-ng app is running!');
+    expect(page.checkForSearchButton()).toBeTruthy();
+    expect(page.checkForSearchInput()).toBeTruthy();
   });
+
+  it('Should do a simple by text', async () => {
+    await page.navigateTo();
+    await page.getSearchInput().clear()
+    await page.getSearchInput().sendKeys('trcwl');
+    await page.getSearchButton().click();
+    expect(page.getProductsElements().count()).toBe(9);
+  });
+
+  it('Should do a simple search by id', async () => {
+    await page.navigateTo();
+    await page.getSearchInput().clear()
+    await page.getSearchInput().sendKeys('618');
+    await page.getSearchButton().click();
+    expect(page.getProductsElements().count()).toBe(1);
+    expect(page.getFirstProductDiscountElement()).toBeTruthy();
+  });
+  
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser

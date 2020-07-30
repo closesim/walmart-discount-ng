@@ -1,7 +1,7 @@
 <div>
   <form [formGroup]="formQuery" (ngSubmit)="onSubmit(formQuery.value)">
     <input type="search" id="query" formControlName="query" placeholder="¿Qué estás buscando?" maxlength="512">
-    <button type="submit">Buscar</button>
+    <button type="submit" id="searchButton">Buscar</button>
   </form>
   <app-products [query]="speech"></app-products>
 </div>

@@ -1,0 +1,88 @@
+<div class="d-flex" style="margin-top: -24px;">
+  <div class="col-lg-5 col-md-4 d-none d-md-block pt-5 col-padding-12">
+      <p class="mb-10 pt-20" style="font-size: 18px;">
+        Resultados para <b class="text-capitalize"> {{query}}</b>:
+      </p>
+  </div>
+  <div class="col-lg-7 col-md-8 col-sm-12">
+    <div>       
+        <div class="dropdown">
+          <div data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" class="category-order-dropdown">Ordenar por: destacados
+            <span class="pull-right"><img alt="open-arrow" width="5" src="https://www.lider.cl/catalogo/images/arrow_mobile.svg">
+            </span>
+          </div>          
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex mb-60">
+  <div class="col-lg-3 col-md-4 d-none d-md-block col-padding-12">      
+  </div>
+  <div class="col-lg-9 col-md-8 col-sm-12 col-padding-12">
+    <div class="shop-content">
+      <div class="ais-Hits">
+        <ul class="ais-Hits-list">
+          <li *ngFor="let product of products" class="ais-Hits-item productItem">
+            <div class="">
+              <div class="rct-block  product-block flex-column justify-content-between overflow-hidden bg-white">
+                <a href="#" style="text-decoration: none; display: inline; background-color: white;">
+                  <div class="overlay-wrap overflow-hidden bg-white" style="display: flex; align-items: center; justify-content: center; max-height: 240px; min-height: 200px; width: 100%;">
+                    <div class="text-center">
+                      <div class="product-image-shadow"></div>
+                      <div class="d-flex labels-container"></div>
+                      <div class="bg-white">
+                        <img width="200" height="200" class="img-hover-zoom img-fluid m-auto " alt="{{product.name}}" src="https://{{product.image}}" style="filter: unset; min-width: 50px; max-height: 240px;">
+                      </div>
+                      <div>                          
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <div class="d-flex text-left product-description mb-15">
+                      <div>
+                        <span class="text-capitalize" style="font-weight: bold; color: rgb(0, 0, 0);">
+                          {{product.brand}} 
+                        </span>
+                        <span> 
+                          {{product.description}}
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mb-12">
+                      <div class="walmart-sales-price d-flex " style="display: flex; align-items: center;">
+                        {{product.price | currency:'CLP':'symbol-narrow'}}
+                        <div *ngIf="product.discount" class="walmart-discount-percentage-card productDiscount" style="margin-top: 1px; margin-left: 6px;">
+                          {{product.discount}}%
+                        </div>
+                      </div>                        
+                    </div>
+                    <div class="d-flex" style="position: absolute; bottom: 70px;">
+                      <div class="d-flex home-delivery-container">
+                        <span class="home-delivery-image">
+                          <img alt="homeDeliveryIcon" class="vertical-align" src="https://www.lider.cl/catalogo/images/despacho-icon.svg" width="17" height="20">
+                        </span>
+                        <span class="home-delivery-text">despacho</span>
+                      </div>
+                      <div class="d-flex site-to-store-container">
+                        <span class="site-to-store-image">
+                          <img alt="siteToStoreIcon" class="vertical-align" src="https://www.lider.cl/catalogo/images/delivery-icon.svg" width="17" height="14">
+                        </span>
+                        <span class="site-to-store-text">retiro</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="walmart-add-cart-button-container" style="justify-content: center; width: 95%;">
+                        <span class="walmart-add-cart-button pt-1 text-center cp-no-select">Agregar</span>
+                      </div>
+                      <div class="walmart-add-cart-button-container-alert"></div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>  

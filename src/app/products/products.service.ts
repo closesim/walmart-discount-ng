@@ -8,14 +8,16 @@ import { HttpParams } from '@angular/common/http';
 })
 export class ProductsService {
 
+  private REST_API_SEARCH = "https://palindrome-discount.herokuapp.com/walmart-discount/api/products/search";
+
   constructor(private httpClient: HttpClient) { }
 
   public getProducts(query: string): Observable<any> {
 
-    let parameter = new HttpParams();
-    parameter = parameter.append('term', query);
+    let parameter = new HttpParams();     
+    parameter = parameter.append('term', query);    
 
-    return this.httpClient.get("https://palindrome-discount.herokuapp.com/walmart-discount/api/products/search", { params: parameter });
+    return this.httpClient.get(this.REST_API_SEARCH, { params: parameter });
 
   }
 

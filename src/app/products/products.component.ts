@@ -12,6 +12,8 @@ export class ProductsComponent implements OnInit {
 
   @Input() query: string;
   public products: any = [];
+  showSpinner = false;
+  public showProducts = true;
 
   ngOnInit(): void {
     this.getProductsList();
@@ -22,9 +24,14 @@ export class ProductsComponent implements OnInit {
   }
 
   private getProductsList(): void {
+    this.showProducts = true
+    this.showSpinner = true;
     this.productsDataService.getProducts(this.query).subscribe((info) => {
       this.products = info;
+      this.showSpinner = false;
+      if (this.products.length === 0) {
+        this.showProducts = false;
+      }
     });
   }
-
 }

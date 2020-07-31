@@ -1,3 +1,24 @@
+<mat-spinner *ngIf="showSpinner"  style="margin-right:auto;margin-left:auto;stroke-width: 2%;"></mat-spinner>
+
+<div class="rct-app-content" *ngIf="!showProducts">
+  <div class="rct-page">
+    <div class="content-wrapper">
+        <div class="rct-page-content">
+          <div class="styled__SearchWithoutResultContainer-sc-1w20d9o-0 hAiWRf">
+              <div class="styled__SearchWithoutResultBody-sc-1w20d9o-1 hsYAQV">
+                <img alt="exploding-icon" class="styled__Icon-sc-1w20d9o-3 laXAqL img-fluid" src="https://www.lider.cl/catalogo/images/explodingIcon.png">
+                <div class="styled__Header-sc-1w20d9o-4 leVDTI">¡Lo sentimos!</div>
+                <div class="styled__NoResultsText-sc-1w20d9o-5 dTOjoM">No encontramos resultados para tu búsqueda de <span>"{{query}}"</span></div>
+                <div class="styled__YellowDivider-sc-1w20d9o-7 fUqvVt"></div>
+                <div class="styled__Tips-sc-1w20d9o-6 cFwMqv"><b>Algunos tips</b>: Revisa si escribiste correctamente lo que buscas. Puedes probar nuevamente usando términos menos específicos.</div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="d-flex" style="margin-top: -24px;">
   <div class="col-lg-5 col-md-4 d-none d-md-block pt-5 col-padding-12">
       <p class="mb-10 pt-20" style="font-size: 18px;">

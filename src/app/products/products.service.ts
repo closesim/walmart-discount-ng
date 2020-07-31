@@ -12,8 +12,9 @@ export class ProductsService {
 
   public getProducts(query: string): Observable<any> {
 
-    let parameter = new HttpParams();
-    parameter = parameter.append('term', query);
+    let parameter = new HttpParams();     
+    if(!query) query ="dcc";
+    parameter = parameter.append('term', query);    
 
     return this.httpClient.get("https://palindrome-discount.herokuapp.com/walmart-discount/api/products/search", { params: parameter });
 
